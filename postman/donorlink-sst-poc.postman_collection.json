@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "bdadc740-ef92-4913-893e-9149f9f0351b",
+		"name": "donorlink-sst-poc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40108773"
+	},
+	"item": [
+		{
+			"name": "http://localhost:80/api/v1/post/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"how to become an expert at nothing\",\n    \"content\": \"To be an expert at nothing you first should know everything but nothing\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:80/api/v1/post/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"v1",
+						"post",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:80/api/v1/post/getall",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:80/api/v1/post/getall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"v1",
+						"post",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
