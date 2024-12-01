@@ -3,17 +3,19 @@
 export default $config({
   app(input) {
     return {
-      name: "monorepo-template",
+      name: "comments-sst-poc",
       removal: input?.stage === "production" ? "retain" : "remove",
       home: "aws",
     };
   },
   async run() {
-    await import("./infra/storage");
+    await import("./infra/web");
     const api = await import("./infra/api");
+    // const migrate = await import("./infra/migrate");
 
     return {
-      api: api.myApi.url,
+      Region: aws.getRegionOutput().name,
+      DATABASE_URL: api.DATABASE_URL,
     };
   },
 });
